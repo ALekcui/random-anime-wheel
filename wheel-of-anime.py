@@ -63,7 +63,7 @@ rigth_panel = tk.Frame(main, width=400, height=W_HEIGHT,background="#e6e2e2")
 rigth_panel.pack_propagate(False) 
 rigth_panel.pack(fill='y',side='right',ipadx=15,ipady=15)
 
-image = Image.open("anime wheel/open-file-icon.png")
+image = Image.open("anime-wheel/open-file-icon.png")
 image.thumbnail((50, 50))
 icon = ImageTk.PhotoImage(image)
 
@@ -102,7 +102,7 @@ generate_wheel.pack(anchor='center')
 
 
 
-GoToAnime = tk.Button(rigth_panel, text="Перейти на страницу аниме",width=330,height=2,command=lambda: open_anime_page(), font=("Arial", 14, "bold"),state="disabled")
+GoToAnime = tk.Button(rigth_panel,text="Перейти на страницу аниме",width=330,height=2,command=lambda: open_anime_page(), font=("Arial", 14, "bold"),state="disabled")
 GoToAnime.pack(anchor='sw',side='left',fill='x',padx=5,pady=5)
 
 
