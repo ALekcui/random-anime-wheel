@@ -63,7 +63,7 @@ rigth_panel = tk.Frame(main, width=400, height=W_HEIGHT,background="#e6e2e2")
 rigth_panel.pack_propagate(False) 
 rigth_panel.pack(fill='y',side='right',ipadx=15,ipady=15)
 
-image = Image.open("anime-wheel/open-file-icon.png")
+image = Image.open("open-file-icon.png")
 image.thumbnail((50, 50))
 icon = ImageTk.PhotoImage(image)
 
