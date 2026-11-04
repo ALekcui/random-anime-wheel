@@ -12,7 +12,7 @@ RADIUS = 330
 
 SELECTED_ANIME = ""
 
-ANIME_LIST = ["Лимонные девочки", "Маг Целитель"]
+ANIME_LIST = ["Лимонные девочки", "Маг Целитель", "Связанные небом"]
 
 def get_anime_list_from_json(filepath : str) -> list[str]:
     ...
@@ -87,7 +87,7 @@ def wheel_generator():
     global ANIME_LIST, COLORS
     anime_list = AnimeList.get(1.0,tk.END).strip()
     if anime_list == "\n" or not anime_list or anime_list == "":
-        ANIME_LIST = ["Лимонные девочки", "Маг Целитель"]
+        ...
     else:
         ANIME_LIST = []
         for anime in anime_list.split("\n"):
