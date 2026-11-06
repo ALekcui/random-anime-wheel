@@ -4,6 +4,8 @@ import math
 import random
 import webbrowser
 from PIL import Image, ImageTk
+import requests
+from io import BytesIO
 
 
 CX, CY = 380, 340
@@ -48,8 +50,8 @@ def open_anime_page() -> None:
     
 
 def generate_colors(num_colors):
-    random.seed(42)
-    return [f"#{random.randint(70, 230):02x}{random.randint(70, 230):02x}{random.randint(70, 230):02x}" for _ in range(num_colors)]
+    random.seed(43)
+    return [f"#{random.randint(90, 230):02x}{random.randint(90, 230):02x}{random.randint(90, 230):02x}" for _ in range(num_colors)]
 
 COLORS = generate_colors(len(ANIME_LIST))
 
@@ -63,7 +65,9 @@ rigth_panel = tk.Frame(main, width=400, height=W_HEIGHT,background="#e6e2e2")
 rigth_panel.pack_propagate(False) 
 rigth_panel.pack(fill='y',side='right',ipadx=15,ipady=15)
 
-image = Image.open("open-file-icon.png")
+url = "https://github.com/ALekcui/random-anime-wheel/blob/main/open-file-icon.png?raw=true"
+response = requests.get(url)
+image = Image.open(BytesIO(response.content))
 image.thumbnail((50, 50))
 icon = ImageTk.PhotoImage(image)
 
